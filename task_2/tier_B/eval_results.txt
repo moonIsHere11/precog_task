@@ -1,0 +1,65 @@
+================================================================================
+EVALUATION RESULTS ON gtest_data.csv
+================================================================================
+
+AUC-ROC: 0.9632
+Accuracy: 0.8218
+Precision: 1.0000
+Recall: 0.7281
+F1-Score: 0.8426
+
+--- Classification Report ---
+              precision    recall  f1-score   support
+
+       Human     0.6593    1.0000    0.7947        60
+          AI     1.0000    0.7281    0.8426       114
+
+    accuracy                         0.8218       174
+   macro avg     0.8297    0.8640    0.8187       174
+weighted avg     0.8825    0.8218    0.8261       174
+
+
+--- Confusion Matrix (Binary) ---
+[[60  0]
+ [31 83]]
+
+Confusion Matrix Interpretation:
+             Predicted:
+             Human    AI
+Actual Human:    60      0
+Actual AI:       31     83
+
+--- Performance Breakdown by Original Classes ---
+Human: Accuracy=1.0000, F1=0.0000 (60 samples)
+AI: Accuracy=0.9333, F1=0.9655 (60 samples)
+AI Mimic: Accuracy=0.5000, F1=0.6667 (54 samples)
+
+[Step 8] Saving results...
+--------------------------------------------------------------------------------
+✓ Predictions saved to: /home/mohit/projects/precog_task/task_2/tier_B/gtest_nn_predictions.csv
+
+[Step 9] Saving ROC curve...
+--------------------------------------------------------------------------------
+✓ ROC curve saved to: /home/mohit/projects/precog_task/task_2/tier_B/gtest_roc_curve.png
+
+[Step 10] Analyzing misclassifications...
+--------------------------------------------------------------------------------
+Total misclassifications: 31/174 (17.8%)
+
+Misclassification breakdown (binary):
+  AI → Human: 31 samples
+
+Misclassification breakdown (by original 3-class):
+  AI: 4 misclassified
+  AI Mimic: 27 misclassified
+
+================================================================================
+Evaluation completed successfully!
+================================================================================
+
+Summary:
+  Model: /home/mohit/projects/precog_task/task_2/tier_B/nn_model.pth
+  Test samples: 174
+  Accuracy: 0.8218
+  F1-Score: 0.8426
+  Predictions saved: /home/mohit/projects/precog_task/task_2/tier_B/gtest_nn_predictions.csv
